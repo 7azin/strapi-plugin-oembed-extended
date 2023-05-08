@@ -1,6 +1,6 @@
-# Strapi plugin oEmbed
+# Strapi plugin oEmbed-extended
 
-Embed content from third party sites (Youtube, Vimeo, Tiktok, Soundcloud, ...) for https://strapi.io v4 (For strapi v3 use v0.4.0)
+Embed content from third party sites for https://strapi.io v4. This plugin is based on [nicolashmln/strapi-plugin-oembed](https://github.com/nicolashmln/strapi-plugin-oembed). It adds all possible embedable sources via the [extractus/oembed-extractor](https://github.com/extractus/oembed-extractor) library.
 
 ![](demo.gif)
 
@@ -15,14 +15,14 @@ Embed content from third party sites (Youtube, Vimeo, Tiktok, Soundcloud, ...) f
 Using npm
 
 ```bash
-npm install --save strapi-plugin-oembed
+npm install --save strapi-plugin-oembed-extended
 npm run build
 ```
 
 Using yarn
 
 ```bash
-yarn add strapi-plugin-oembed
+yarn add strapi-plugin-oembed-extended
 yarn build
 ```
 
@@ -59,7 +59,6 @@ If you paste the url `https://www.youtube.com/watch?v=tkiOqSTVGds` in the modal,
   "url": "https://www.youtube.com/watch?v=tkiOqSTVGds",
   "title": "Beautiful New Caledonia",
   "thumbnail": "https://i.ytimg.com/vi/tkiOqSTVGds/hqdefault.jpg",
-  "mime": "video/youtube",
   "rawData": {
     "type": "video",
     "thumbnail_url": "https://i.ytimg.com/vi/tkiOqSTVGds/hqdefault.jpg",
@@ -82,11 +81,4 @@ If you paste the url `https://www.youtube.com/watch?v=tkiOqSTVGds` in the modal,
 
 ## Supported third party sites
 
-- Youtube
-- Vimeo
-- Tiktok
-- Soundcloud
-
-Feel free to submit a PR with the provider you want, you just have to edit this file: `server/services/oembed.js`.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E0H3N9M)
+All 700 services supported by official OEmbed are supported.
