@@ -21,7 +21,6 @@ module.exports = (
         const fetchedData = await extract(url);
 
         let title = fetchedData.title;
-        let mime = 'video/youtube';
         let thumbnail = fetchedData.thumbnail_url;
 
         console.log(fetchedData)
@@ -31,7 +30,6 @@ module.exports = (
           url,
           title,
           thumbnail,
-          mime,
           rawData: fetchedData,
         }
 
