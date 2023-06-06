@@ -1,5 +1,5 @@
 {
-  "name": "strapi-plugin-oembed",
+  "name": "@7azin/strapi-plugin-oembed",
   "version": "2.0.1",
   "description": "Embed content from all possible third party sites (YouTube, Vimeo, SoundCloud...) in Strapi",
   "strapi": {
@@ -12,13 +12,11 @@
   "dependencies": {
     "@extractus/oembed-extractor": "^3.1.9"
   },
-  "author": {
-    "name": "Azin Azadi"
-  },
+  "author": "Azin Azadi",
   "homepage": "https://github.com/7azin/strapi-plugin-oembed-extended",
   "repository": {
     "type": "git",
-    "url": "https://github.com/7azin/strapi-plugin-oembed-extended"
+    "url": "git+https://github.com/7azin/strapi-plugin-oembed-extended.git"
   },
   "keywords": [
     "strapi",
@@ -38,5 +36,8 @@
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=8.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7azin/strapi-plugin-oembed-extended/issues"
+  }
 }
