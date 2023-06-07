@@ -9,7 +9,7 @@ const fetch = require('cross-fetch');
  */
 const getBase64FromUrl = async (url) => {
   const response  = await fetch(url);
-  return (await response.buffer()).toString('base64');
+  return "data:image/jpg;base64, " + (await response.buffer()).toString('base64');
 }
 
 module.exports = (
@@ -23,10 +23,15 @@ module.exports = (
 
       try {
         const fetchedData = await extract(url);
-        const thumbnailUrl = fetchedData['thumbnail_url']
+        let thumbnailUrl = fetchedData['thumbnail_url']
         if (thumbnailUrl !== undefined){
           // For privacy reasons:
           // save the thumbnail already, so we can show it to the users as an inline image, without them being tracked
+          if (fetchedData.provider_name === 'YouTube'){
+            // get the highres thumbnail
+            thumbnailUrl = thumbnailUrl.substring(0, thumbnailUrl.lastIndexOf('/')+1) + "maxresdefault.jpg"
+            fetchedData.thumbnail_url = thumbnailUrl;
+          }
           fetchedData['fetched_thumbnail'] = await getBase64FromUrl(thumbnailUrl);
         }
 
