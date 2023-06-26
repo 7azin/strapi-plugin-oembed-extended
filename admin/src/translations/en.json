@@ -1,9 +1,9 @@
 {
-  "form.button.import": "Import oEmbed content",
+  "form.button.import": "Import URL",
   "form.button.edit": "Edit",
   "form.button.delete": "Delete",
-  "modal.import.title": "Import oEmbed content",
+  "modal.import.title": "Import URL",
   "modal.import.input.label": "URL",
-  "modal.import.input.description": "Youtube, Vimeo, Tiktok or Soundcloud",
+  "modal.import.input.description": "The URL of the page you want to embed",
   "modal.import.button.import": "Import"
 }
