@@ -1,6 +1,6 @@
 {
   "name": "@7azin/strapi-plugin-oembed",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Embed content from all possible third party sites (YouTube, Vimeo, SoundCloud...) in Strapi",
   "strapi": {
     "name": "oembed",
