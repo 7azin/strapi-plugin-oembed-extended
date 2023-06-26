@@ -38,6 +38,10 @@ module.exports = (
         console.log(fetchedData)
         data = {...fetchedData, ...{url}};
       } catch (error) {
+
+        console.log("oembed.js error: " + error);
+        console.log("oembed.js error: " + error.stack);
+
         if (url.includes("instagram.com") || url.includes("instagr.am")){
           console.log(url);
           return {url, provider_name: 'Instagram'};
