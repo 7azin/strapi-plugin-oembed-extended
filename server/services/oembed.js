@@ -55,6 +55,7 @@ module.exports = (
             error: 'Embedding has been disabled for this media'
           }
         } else {
+          console.log("oembed.js error: " + error.stack);
           throw new Error(error);
         }
       }
