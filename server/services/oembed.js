@@ -38,6 +38,14 @@ module.exports = (
         console.log(fetchedData)
         data = {...fetchedData, ...{url}};
       } catch (error) {
+        if (url.includes("instagram.com") || url.includes("instagr.am")){
+          console.log(url);
+          return {url, provider_name: 'Instagram'};
+        }
+        if (url.includes("facebook.com") || url.includes("fb.com")){
+          console.log(url);
+          return {url, provider_name: 'Facebook'};
+        }
         if (error.response.status === 404) {
           data = {
             error: 'This URL can\'t be found'
