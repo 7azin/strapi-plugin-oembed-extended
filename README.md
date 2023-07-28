@@ -15,14 +15,14 @@ Embed content from third party sites for https://strapi.io v4. This plugin is ba
 Using npm
 
 ```bash
-npm install --save strapi-plugin-oembed-extended
+npm install --save @7azin/strapi-plugin-oembed
 npm run build
 ```
 
 Using yarn
 
 ```bash
-yarn add strapi-plugin-oembed-extended
+yarn add @7azin/strapi-plugin-oembed
 yarn build
 ```
 
