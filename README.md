@@ -56,26 +56,51 @@ If you paste the url `https://www.youtube.com/watch?v=tkiOqSTVGds` in the modal,
 
 ```json
 {
-  "url": "https://www.youtube.com/watch?v=tkiOqSTVGds",
-  "title": "Beautiful New Caledonia",
-  "thumbnail": "https://i.ytimg.com/vi/tkiOqSTVGds/hqdefault.jpg",
-  "rawData": {
-    "type": "video",
-    "thumbnail_url": "https://i.ytimg.com/vi/tkiOqSTVGds/hqdefault.jpg",
-    "thumbnail_width": 480,
-    "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/tkiOqSTVGds?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-    "version": "1.0",
-    "width": 480,
-    "author_url": "https://www.youtube.com/user/lilomoino",
-    "provider_name": "YouTube",
-    "thumbnail_height": 360,
-    "height": 270,
-    "author_name": "LilO Moino",
-    "provider_url": "https://www.youtube.com/",
-    "title": "Beautiful New Caledonia"
-  }
+  "title":"Familien gehören zusammen! - Dokumentation",
+  "author_name":"Seebrücke",
+  "author_url":"https://www.youtube.com/@Seebruecke",
+  "type":"video",
+  "height":113,
+  "width":200,
+  "version":"1.0",
+  "provider_name":"YouTube",
+  "provider_url":"https://www.youtube.com/",
+  "thumbnail_height":360,
+  "thumbnail_width":480,
+  "thumbnail_url":"https://i.ytimg.com/vi/fn-KS8vDJuI/maxresdefault.jpg",
+  "html":"<iframe ... ></iframe>",
+  "fetched_thumbnail":"data:image/jpg;base64, BASE64 IMAGE DATA",
+  "url":"https://www.youtube.com/watch?v=fn-KS8vDJuI"
 }
 ```
+
+for Instagram you would get 
+```json
+{
+  "url":"https://www.instagram.com/p/CtosQTNsUXt/",
+  "provider_name":"Instagram"
+}
+```
+
+As long as you don't have a special token from Instagram, they don't provide 
+any OEmbed service. We provide still the URL and you can use it together
+with a front end embed platform to show the Instagram Embed.
+
+for Twitter you would get
+```json
+{
+   "url":"https://twitter.com/_Seebruecke_/status/1599102388710670336",
+   "author_name":"Seebrücke",
+   "author_url":"https://twitter.com/_Seebruecke_",
+   "html":"<blockquote ...",
+   "width":550,
+   "height":null,
+   "type":"rich",
+   "cache_age":"3153600000",
+   "provider_name":"Twitter",
+   "provider_url":"https://twitter.com",
+   "version":"1.0"
+}```
 
 **Note:** the data returned from your endpoint will be a string and not a JSON object. You'll just have to parse the data in your front (`JSON.parse(article.oembed)`).
 
