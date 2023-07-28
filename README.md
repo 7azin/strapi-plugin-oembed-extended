@@ -100,7 +100,8 @@ for Twitter you would get
    "provider_name":"Twitter",
    "provider_url":"https://twitter.com",
    "version":"1.0"
-}```
+}
+```
 
 **Note:** the data returned from your endpoint will be a string and not a JSON object. You'll just have to parse the data in your front (`JSON.parse(article.oembed)`).
 
